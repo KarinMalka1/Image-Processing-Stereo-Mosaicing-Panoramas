@@ -152,7 +152,7 @@ def my_sift_detect_and_compute(frame):
     else:
         gray = frame
     
-    # --- שינוי 1: הקטנה פי 2 ---
+    # הקטנה פי 2
     h, w = gray.shape
     # עובדים על תמונה מוקטנת
     small_gray = cv2.resize(gray.astype(np.float32), (w // 2, h // 2))
@@ -161,8 +161,8 @@ def my_sift_detect_and_compute(frame):
     dog = create_dog_space(small_gray)
     kps_raw = find_keypoints(dog)
     pts, descriptors = extract_sift_descriptors(dog, kps_raw)
+
     
-    # --- החזרה לגודל מקורי ---
     # מכפילים את הקואורדינטות פי 2 כדי שיתאימו לפריים המקורי
     pts = pts * 2
     
@@ -309,7 +309,7 @@ def build_all_panoramas(frames, shifts, n_out_frames):
     global_y_offset = abs(min_dy) + 50
     margin = 5 
 
-    # --- לולאה ראשית אחת על הפריימים ---
+    #  לולאה ראשית אחת על הפריימים 
     for i, frame in enumerate(frames[:-1]):
         dx = abs(shifts[i][0])
         if abs(dx) < 0.1: dx = 2.0 
@@ -326,13 +326,7 @@ def build_all_panoramas(frames, shifts, n_out_frames):
         target_x = int(current_x)
         paste_y = int(global_y_offset - y_positions[i])
         
-        # אנחנו צריכים לחלץ את ה-Strip עבור כל יחס בנפרד,
-        # אבל המסכה (Fade) היא זהה לכולם, אז נחשב אותה פעם אחת אם אפשר,
-        # או שנחשב בתוך הלולאה אם המיקום משתנה דרסטית. 
-        # במימוש שלך ה-cut_center תלוי ב-ratio, אז ה-strip עצמו משתנה קצת.
-        # אבל זה עדיין מהיר יותר מלבנות הכל מחדש.
-        
-        # --- לולאה פנימית קטנה על 10 הפנורמות ---
+        #  לולאה פנימית קטנה על 10 הפנורמות 
         for j, ratio in enumerate(x_ratios):
             cut_center = int(start_col_base + span * ratio)
             
@@ -368,7 +362,7 @@ def build_all_panoramas(frames, shifts, n_out_frames):
 
         current_x += dx
 
-    # --- נרמול וסגירה סופית לכל הפנורמות ---
+    #  נרמול וסגירה סופית לכל הפנורמות 
     final_panos = []
     final_width = int(current_x)
     
@@ -465,7 +459,7 @@ def generate_panorama(input_frames_path, n_out_frames=10):
     print(f"Loaded {len(frames)} frames. Calculating shifts...")
     shifts = calculate_all_shifts(frames)
 
-    # --- השינוי כאן: בניית כל הפנורמות במכה אחת ---
+    # בניית כל הפנורמות במכה אחת 
     print(f"Generating {n_out_frames} panoramas simultaneously...")
     raw_panoramas = build_all_panoramas(frames, shifts, n_out_frames)
     
@@ -476,7 +470,7 @@ def generate_panorama(input_frames_path, n_out_frames=10):
     print("Aligning and converting to PIL...")
     for i, pano_numpy in enumerate(raw_panoramas):
         ratio = x_ratios[i]
-        # כאן אנחנו משתמשים בפונקציית הקרופ הקיימת שלך
+        # כאן משתמשים בפונקציית הקרופ הקיימת 
         pano_aligned = crop_for_alignment(pano_numpy, ratio, frame_width)
         pil_img = Image.fromarray(pano_aligned)
         pil_results.append(pil_img)
