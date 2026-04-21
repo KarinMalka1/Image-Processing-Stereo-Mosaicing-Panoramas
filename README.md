@@ -45,10 +45,10 @@ This includes safely loading image frames from directories, extracting frames fr
 and compiling the final PIL image sequence back into a smooth video format.
 
 ## Technologies Used
-**Python**
-**NumPy & SciPy:** For all matrix operations, gradient calculations, and multi-dimensional filtering.
-**OpenCV:** Utilized strictly for basic frame I/O operations and color space conversions.
-**Pillow (PIL):** For final image formatting and sequence alignment.
+* **Python**
+* **NumPy & SciPy:** For all matrix operations, gradient calculations, and multi-dimensional filtering.
+* **OpenCV:** Utilized strictly for basic frame I/O operations and color space conversions.
+* **Pillow (PIL):** For final image formatting and sequence alignment.
 
 ## Installation & Execution
 bash
