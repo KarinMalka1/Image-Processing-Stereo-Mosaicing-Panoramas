@@ -51,5 +51,5 @@ and compiling the final PIL image sequence back into a smooth video format.
 * **Pillow (PIL):** For final image formatting and sequence alignment.
 
 ## Installation & Execution
-bash
+```bash
 pip install -r requirements.txt
