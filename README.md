@@ -1,6 +1,6 @@
-Stereo Mosaicing & Panorama Engine
+# Stereo Mosaicing & Panorama Engine
 
-Overview:
+## Overview
 I developed this project to implement a robust Stereo Mosaicing algorithm from scratch. 
 The primary goal of this engine is to generate seamless panoramas from a continuous video sequence by leveraging
 the overlapping regions between consecutive frames.
