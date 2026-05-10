@@ -2,9 +2,10 @@
 
 ## Overview
 
-<video src="viewpoint_result.1.mp4" width="100%" controls muted>
-https://github.com/user-attachments/assets/844a27db-427e-4a51-b9ad-cc6a4a425c5f
-</video>
+
+
+https://github.com/user-attachments/assets/a0517d6b-d3d8-4da7-9974-d21e456b3803
+
 
 I developed this project to implement a robust Stereo Mosaicing algorithm from scratch. 
 The primary goal of this engine is to generate seamless panoramas from a continuous video sequence by leveraging
