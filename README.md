@@ -3,7 +3,7 @@
 ## Overview
 
 <video src="viewpoint_result.1.mp4" width="100%" controls muted>
-  Your browser does not support the video tag.
+https://github.com/user-attachments/assets/844a27db-427e-4a51-b9ad-cc6a4a425c5f
 </video>
 
 I developed this project to implement a robust Stereo Mosaicing algorithm from scratch. 
