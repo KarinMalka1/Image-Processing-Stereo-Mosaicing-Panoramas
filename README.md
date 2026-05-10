@@ -2,7 +2,10 @@
 
 ## Overview
 
-https://github.com/user-attachments/assets/e4cdd64a-1c13-4cae-b136-5956d85201ff
+
+
+https://github.com/user-attachments/assets/96580fe8-b4ce-4bbf-a58f-353a14780b79
+
 
 
 I developed this project to implement a robust Stereo Mosaicing algorithm from scratch. 
