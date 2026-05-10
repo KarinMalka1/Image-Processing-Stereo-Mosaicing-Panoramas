@@ -1,6 +1,10 @@
 # Stereo Mosaicing & Panorama Engine
 
 ## Overview
+
+https://github.com/user-attachments/assets/e4cdd64a-1c13-4cae-b136-5956d85201ff
+
+
 I developed this project to implement a robust Stereo Mosaicing algorithm from scratch. 
 The primary goal of this engine is to generate seamless panoramas from a continuous video sequence by leveraging
 the overlapping regions between consecutive frames.
