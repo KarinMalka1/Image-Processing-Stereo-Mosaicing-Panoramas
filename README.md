@@ -9,7 +9,7 @@ The primary goal of this engine is to generate seamless panoramas from a continu
 the overlapping regions between consecutive frames.
 
 Rather than relying on high-level library functions for the core math,
-I chose to implement the underlying computer vision algorithms myself—including a custom SIFT-like feature extractor
+I chose to implement the underlying computer vision algorithms myself-including a custom SIFT-like feature extractor
 and a RANSAC motion estimator.
 This approach allowed me to gain a deep, hands-on understanding of feature matching,
 scale-invariant detection, and geometric transformations.
